@@ -17,10 +17,16 @@ export default {
   },
   methods: {
     escape(e) {
-      this.style.transform = "translate(30px, 30px)";
-      this.currentText = this.insults[
-        Math.floor(Math.random() * this.insults.length)
-      ];
+      const rect = this.$el.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      const escapingDistanceX = (centerX - e.pageX) * 3
+      const escapingDistanceY = (centerY - e.pageY) * 3
+
+      this.style.transform = `translate(${escapingDistanceX}px, ${escapingDistanceY}px)`;
+    //   this.currentText = this.insults[
+    //     Math.floor(Math.random() * this.insults.length)
+    //   ];
       setTimeout(this.reset, 2000);
     },
     reset() {
@@ -36,5 +42,6 @@ export default {
   display: inline-block;
   padding: 0.5rem;
   transition: transform 0.2s;
+  position: absolute;
 }
 </style>
