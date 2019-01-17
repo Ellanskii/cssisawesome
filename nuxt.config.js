@@ -42,6 +42,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    'nuxt-router-extras',
     // Doc: https://buefy.github.io/#/documentation
     // 'nuxt-buefy',
     ['nuxt-sass-resources-loader', '@/assets/styles/_buefy-customization.scss'],
