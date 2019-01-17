@@ -1,5 +1,5 @@
 <template lang="pug">
-.swiper-container 
+.swiper-container
     .swiper-wrapper
         slot
     .swiper-pagination(v-if="pagination")
@@ -28,6 +28,7 @@ export default {
     }
   },
   mounted() {
+    const selector = this.$el.id ? `#${this.$el.id}` : ".swiper-container";
     const swiperConfig = {};
     if (this.pagination) {
       swiperConfig.pagination = {
@@ -45,7 +46,7 @@ export default {
         el: ".swiper-scrollbar"
       };
     }
-    const swiper = new Swiper(".swiper-container", swiperConfig);
+    const swiper = new Swiper(selector, swiperConfig);
   }
 };
 </script>
