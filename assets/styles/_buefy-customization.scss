@@ -1,7 +1,14 @@
 @import "~bulma/sass/utilities/_all";
+$violet: #6a2c70;
+$purple: #b83b5e;
+$orange: #f08a5d;
+$yellow: #f9ed69;
 
-$primary: #8c67ef;
+$primary: $violet;
 $primary-invert: findColorInvert($primary);
+
+$warning: #f9ed69;
+$warning-invert: findColorInvert($warning);
 
 $colors: (
     "white": ($white, $black),
