@@ -1,6 +1,6 @@
 <template lang="pug">
     .escaping-button-container(@mouseover.passive="escape" :style="style")
-        nuxt-link.button(to="/") {{ currentText }}
+        nuxt-link.button.is-danger.is-outlined(to="/") {{ currentText }}
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    this.$el.parentNode.style.marginBottom = this.$el.getBoundingClientRect().height + 'px'
+    this.$el.parentNode.style.paddingBottom = this.$el.getBoundingClientRect().height + 'px'
   },
   methods: {
     escape(e) {
@@ -47,5 +47,6 @@ export default {
   margin-top: -0.5rem;
   transition: transform 0.2s;
   position: absolute;
+  z-index: 2;
 }
 </style>

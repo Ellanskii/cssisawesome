@@ -4,25 +4,78 @@ $purple: #b83b5e;
 $orange: #f08a5d;
 $yellow: #f9ed69;
 
+$dark: #191b27;
+
 $primary: $violet;
 $primary-invert: findColorInvert($primary);
+$danger: $purple;
+$danger-invert: findColorInvert($danger);
 
 $warning: #f9ed69;
 $warning-invert: findColorInvert($warning);
 
 $colors: (
-    "white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-    "info": ($info, $info-invert),
-    "success": ($success, $success-invert),
-    "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert)
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  )
 );
 
+.has-background-dark {
+  .title {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .subtitle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
 
+.has-text-gradient {
+  background: -webkit-linear-gradient(left, $violet, $orange, $purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+}
+a.has-text-gradient {
+  background-size: 200%;
+  background-position: right;
+  transition: background-position 0.3s;
+  &:hover {
+    background-position: left;
+  }
+}
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
