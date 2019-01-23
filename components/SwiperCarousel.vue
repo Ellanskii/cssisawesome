@@ -53,4 +53,11 @@ export default {
 
 <style lang="scss">
 @import "node_modules/swiper/dist/css/swiper";
+
+.swiper-pagination-bullet {
+  &-active {
+    background: linear-gradient(45deg, $violet, $purple, $orange);
+    box-shadow: 0px 0px 8px 3px $violet;
+  }
+}
 </style>
