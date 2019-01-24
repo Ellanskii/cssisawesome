@@ -47,6 +47,17 @@ module.exports = {
     // Doc: https://buefy.github.io/#/documentation
     // 'nuxt-buefy',
     ['nuxt-sass-resources-loader', '@/assets/styles/_buefy-customization.scss'],
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '52056459',
+        webvisor: true,
+        clickmap: true,
+        // useCDN:false,
+        // trackLinks:true,
+        // accurateTrackBounce:true,
+      }
+    ],
   ],
   /*
   ** Axios module configuration

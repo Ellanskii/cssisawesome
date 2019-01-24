@@ -1,9 +1,15 @@
 <template lang="pug">
 main.has-background-dark
-    .hero.is-fullheight.is-primary.is-bold
-        .hero-body: .has-text-centered(style="width:100%")
-            h1.title.is-1 Ваш сайт не приносит прибыль?
-            p.subtitle.is-3 Нам ли не знать
+    .hero.is-fullheight.is-primary.is-bold#first-section
+        .hero-body
+            .container.is-fluid
+                .columns.is-vcentered 
+                    .column.is-5
+                        h1.title.is-1 Ваш сайт не приносит прибыль?
+                        p.subtitle.is-3 Нам ли не знать
+                        .button.is-info.is-medium Пойти нахуй
+                    .column.is-7
+                        img(src="/img/shitty_studio/thinking.svg").thinking
     share-links
     section.section
         .container.is-fluid.title-block
@@ -78,6 +84,14 @@ export default {
 </script>
 
 <style lang="scss">
+#first-section {
+    background: url(/img/shitty_studio/hero_bg.svg) no-repeat top right;
+    background-size: 60% 90%;
+
+    .thinking {
+        max-height: 80vh;
+    }
+}
 #qr_user_behavior_seo {
     width: 100px;
     height: 100px;
@@ -88,7 +102,7 @@ export default {
 .box {
     background-color: rgba(#252733, 0.9);
     // background-image: linear-gradient(to top, rgba($violet, 0.5), rgba($purple, 0.1));
-    background-attachment: fixed;
+    // background-attachment: fixed;
     min-height: 100%;
 }
 .pixel {
@@ -102,7 +116,7 @@ export default {
 .has-background-dark {
     background-size: cover;
     background-image: url(/img/shitty_studio/Group.svg);
-    background-attachment: fixed;
+    // background-attachment: fixed;
 }
 .title-block {
     margin-bottom: 2rem;

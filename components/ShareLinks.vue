@@ -1,6 +1,6 @@
 <template lang="pug">
 .share-links(v-if="isClient")
-    a.button.is-warning(
+    a.button.is-warning.is-outlined(
         v-if="socials.indexOf('vk') >= 0"
         :href="'https://vk.com/share.php?url=' + pageUrl" 
         target="_blank" 
@@ -8,7 +8,7 @@
         title="Поделиться в ВК"
     )
         b-icon(icon="vk")
-    a.button.is-warning(
+    a.button.is-warning.is-outlined(
         v-if="socials.indexOf('fb') >= 0"
         :href="'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl" 
         target="_blank" 
@@ -16,7 +16,7 @@
         title="Поделиться в Facebook"
     )
         b-icon(icon="facebook")    
-    a.button.is-warning(
+    a.button.is-warning.is-outlined(
         v-if="socials.indexOf('twitter') >= 0"
         :href="'https://twitter.com/intent/tweet?url=' + pageUrl" 
         target="_blank" 
